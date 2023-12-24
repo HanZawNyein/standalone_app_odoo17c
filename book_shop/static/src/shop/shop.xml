@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="book_shop.Shop">
+        <div class="container mt-2">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <t t-foreach="states.products" t-as="product" t-key="product.id">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img t-attf-src="/web/image/product.product/{{product.id}}/image_1920" class="card-img-top" alt="..."/>
+                        <div class="card-body">
+                        <h5 class="card-title"><t t-esc="product.name"/></h5>
+                            <p class="card-text">
+                                <t t-esc="product.list_price"/>
+                                <t t-esc="product.currency_id[1]"/>
+                            </p>
+                      </div>
+                    </div>
+                  </div>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>
