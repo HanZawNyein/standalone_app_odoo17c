@@ -1,0 +1,1 @@
+# standalone_app_odoo17c
